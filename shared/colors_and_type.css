@@ -1,0 +1,266 @@
+/* =========================================================================
+   Haus des Stiftens — Colors & Type
+   ---------------------------------------------------------------------------
+   Brand reference:  https://www.hausdesstiftens.org/
+   Primary brand:    #7D9B38  "Engagement-Grün"  — wordmark, logo, brand
+                                                    marks, impact stats,
+                                                    structural accents.
+   Highlight:        #F06914  "Signal-Orange"    — buttons, links, hover,
+                                                    focus, eyebrow labels.
+   Ink:              #1D1D1B  warm near-black for body + headings.
+   Paper:            #FFFFFF / cream washes for surfaces.
+   Type:             Barlow Condensed (display + headings, official brand
+                     face, all weights loaded from fonts/),
+                     Galano Classic (body, official brand face, all
+                     weights loaded from fonts/),
+                     Foro (editorial / pull quotes, official brand face,
+                     all weights loaded from fonts/),
+                     JetBrains Mono (code).
+   ========================================================================= */
+
+/* --- Barlow Condensed (display) — official brand face ------------------- */
+@font-face { font-family: 'Barlow Condensed'; font-weight: 100; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-Thin.otf')           format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 100; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-ThinItalic.otf')     format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 200; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-ExtraLight.otf')     format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 200; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-ExtraLightItalic.otf') format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 300; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-Light.otf')          format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 300; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-LightItalic.otf')    format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 400; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-Regular.otf')        format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 400; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-Italic.otf')         format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 500; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-Medium.otf')         format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 500; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-MediumItalic.otf')   format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 600; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-SemiBold.otf')       format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 600; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-SemiBoldItalic.otf') format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 700; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-Bold.otf')           format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 700; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-BoldItalic.otf')     format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 800; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-ExtraBold.otf')      format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 800; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-ExtraBoldItalic.otf') format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 900; font-style: normal; font-display: swap; src: url('./fonts/BarlowCondensed-Black.otf')          format('opentype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 900; font-style: italic; font-display: swap; src: url('./fonts/BarlowCondensed-BlackItalic.otf')    format('opentype'); }
+
+/* --- Galano Classic (body) — official brand face ------------------------ */
+@font-face { font-family: 'Galano Classic'; font-weight: 100; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-Thin.otf')            format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 100; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-ThinItalic.otf')      format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 200; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-ExtraLight.otf')      format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 200; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-ExtraLightItalic.otf') format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 300; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-Light.otf')           format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 300; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-LightItalic.otf')     format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 400; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-Regular.otf')         format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 400; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-Italic.otf')          format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 500; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-Medium.otf')          format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 500; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-MediumItalic.otf')    format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 600; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-SemiBold.otf')        format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 600; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-SemiBoldItalic.otf')  format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 700; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-Bold.otf')            format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 700; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-BoldItalic.otf')      format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 800; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-ExtraBold.otf')       format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 800; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-ExtraBoldItalic.otf') format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 900; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-Heavy.otf')           format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 900; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-HeavyItalic.otf')     format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 950; font-style: normal; font-display: swap; src: url('./fonts/GalanoClassic-Black.otf')           format('opentype'); }
+@font-face { font-family: 'Galano Classic'; font-weight: 950; font-style: italic; font-display: swap; src: url('./fonts/GalanoClassic-BlackItalic.otf')     format('opentype'); }
+
+/* --- Foro (editorial / pull quotes) — official brand face --------------- */
+@font-face { font-family: 'Foro'; font-weight: 100; font-style: normal; font-display: swap; src: url('./fonts/ForoThi.otf')    format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 100; font-style: italic; font-display: swap; src: url('./fonts/ForoThiIta.otf') format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 200; font-style: normal; font-display: swap; src: url('./fonts/ForoXLig.otf')   format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 200; font-style: italic; font-display: swap; src: url('./fonts/ForoXLigIta.otf') format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 300; font-style: normal; font-display: swap; src: url('./fonts/ForoLig.otf')    format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 300; font-style: italic; font-display: swap; src: url('./fonts/ForoLigIta.otf') format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 400; font-style: normal; font-display: swap; src: url('./fonts/ForoReg.otf')    format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 400; font-style: italic; font-display: swap; src: url('./fonts/ForoIta.otf')    format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 500; font-style: normal; font-display: swap; src: url('./fonts/ForoMed.otf')    format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 500; font-style: italic; font-display: swap; src: url('./fonts/ForoMedIta.otf') format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 700; font-style: normal; font-display: swap; src: url('./fonts/ForoBol.otf')    format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 700; font-style: italic; font-display: swap; src: url('./fonts/ForoBolIta.otf') format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 800; font-style: normal; font-display: swap; src: url('./fonts/ForoXBol.otf')   format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 800; font-style: italic; font-display: swap; src: url('./fonts/ForoXBolIta.otf') format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 900; font-style: normal; font-display: swap; src: url('./fonts/ForoBla.otf')    format('opentype'); }
+@font-face { font-family: 'Foro'; font-weight: 900; font-style: italic; font-display: swap; src: url('./fonts/ForoBlaIta.otf') format('opentype'); }
+
+/* --- Code (Google Fonts) ----------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Brand — primary (Hausfarbe Grün, Designguide 2024)
+     Resting/Text-Töne = Hausfarbe bzw. erlaubte Aufhellung (40/60/80%).
+     *-hover darf als UI-Ausnahme dunkler sein. */
+  --hds-green:        #7D9B38;  /* Hausfarbe Grün */
+  --hds-green-hover:  #6A8430;  /* Ausnahme: Hover-Abdunklung */
+  --hds-green-deep:   #7D9B38;  /* war #4F6624 — jetzt Hausfarbe (Ruhe-Text) */
+  --hds-green-soft:   #B1C388;  /* war #C5D29D — Grün 60% (Ränder) */
+  --hds-green-tint:   #CBD7AF;  /* war #EEF2DE — Grün 40% (Flächen/Chips) */
+
+  /* Brand — highlight (Hausfarbe Orange — sparsam einsetzen) */
+  --hds-orange:       #F06914;  /* Hausfarbe Orange */
+  --hds-orange-hover: #D85705;  /* Ausnahme: Hover-Abdunklung */
+  --hds-orange-deep:  #F06914;  /* war #B84804 — jetzt Hausfarbe (Ruhe-Links) */
+  --hds-orange-soft:  #F6A572;  /* war #F8B98F — Orange 60% (Ränder) */
+  --hds-orange-tint:  #F9C3A1;  /* war #FDE9DA — Orange 40% (Flächen/Chips) */
+
+  /* Neutrals — Hausfarbe Grau #565656 + Schwarz-Abstufungen (Web-Text #333) */
+  --hds-ink:          #333333;  /* war #1D1D1B — 80% Schwarz (Überschriften) */
+  --hds-ink-2:        #333333;  /* war #3A3A38 — Web-Fließtext */
+  --hds-ink-3:        #565656;  /* war #6B6B68 — Hausfarbe Grau (Sekundärtext) */
+  --hds-ink-4:        #9A9A9A;  /* war #9A9994 — Grau 60% (gedämpft) */
+  --hds-paper:        #FFFFFF;
+  --hds-paper-2:      #FAF7F1;
+  --hds-paper-3:      #F2EDE3;
+  --hds-line:         #E5E1D8;
+  --hds-line-strong:  #C8C4BA;
+  --hds-night:        #1D1D1B;
+  --hds-night-2:      #2A2A28;
+
+  /* Semantic */
+  --hds-success:      #7D9B38;
+  --hds-warning:      #F06914;
+  --hds-error:        #A82A1F;
+  --hds-info:         #2E6CA0;
+
+  /* Type */
+  --hds-font-display: 'Barlow Condensed', 'Helvetica Neue Condensed', 'Helvetica Neue', Arial, sans-serif;
+  --hds-font-body:    'Galano Classic', 'Helvetica Neue', Arial, sans-serif;
+  --hds-font-quote:   'Foro', 'Galano Classic', 'Helvetica Neue', Arial, sans-serif;
+  --hds-font-mono:    'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  /* Backwards-compat alias (was Lora). Points to the quote face. */
+  --hds-font-serif:   var(--hds-font-quote);
+
+  --hds-text-xs:   0.75rem;
+  --hds-text-sm:   0.875rem;
+  --hds-text-base: 1rem;
+  --hds-text-md:   1.125rem;
+  --hds-text-lg:   1.375rem;
+  --hds-text-xl:   1.75rem;
+  --hds-text-2xl:  2.25rem;
+  --hds-text-3xl:  3rem;
+  --hds-text-4xl:  4rem;
+
+  --hds-lh-tight:   1.15;
+  --hds-lh-snug:    1.3;
+  --hds-lh-normal:  1.55;
+  --hds-lh-relaxed: 1.7;
+  --hds-tracking-tight: -0.01em;
+  --hds-tracking-wide:  0.04em;
+
+  /* Spacing — 4px base */
+  --hds-space-1: 4px;   --hds-space-2: 8px;   --hds-space-3: 12px;
+  --hds-space-4: 16px;  --hds-space-5: 20px;  --hds-space-6: 24px;
+  --hds-space-8: 32px;  --hds-space-10: 40px; --hds-space-12: 48px;
+  --hds-space-16: 64px; --hds-space-20: 80px; --hds-space-24: 96px;
+
+  /* Radii */
+  --hds-radius-xs: 2px;  --hds-radius-sm: 4px;  --hds-radius-md: 6px;
+  --hds-radius-lg: 12px; --hds-radius-xl: 20px; --hds-radius-pill: 999px;
+
+  /* Shadows — warm-tinted */
+  --hds-shadow-sm: 0 1px 2px rgba(29,29,27,0.05);
+  --hds-shadow-md: 0 4px 14px rgba(29,29,27,0.07);
+  --hds-shadow-lg: 0 18px 48px rgba(29,29,27,0.10);
+  --hds-shadow-focus: 0 0 0 3px rgba(240,105,20,0.30);
+
+  /* Motion */
+  --hds-ease:     cubic-bezier(.22,.61,.36,1);
+  --hds-ease-out: cubic-bezier(.16,1,.3,1);
+  --hds-dur-quick: 120ms;
+  --hds-dur-base:  220ms;
+  --hds-dur-slow:  420ms;
+
+  /* Layout */
+  --hds-container:        1200px;
+  --hds-container-narrow: 760px;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--hds-font-body);
+  font-size: var(--hds-text-base);
+  line-height: var(--hds-lh-normal);
+  color: var(--hds-ink-2);
+  background: var(--hds-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--hds-font-display);
+  font-weight: 600;
+  color: var(--hds-ink);
+  margin: 0 0 var(--hds-space-4);
+  letter-spacing: var(--hds-tracking-tight);
+}
+h1 { font-size: var(--hds-text-3xl); line-height: var(--hds-lh-tight); }
+h2 { font-size: var(--hds-text-2xl); line-height: var(--hds-lh-tight); }
+h3 { font-size: var(--hds-text-xl);  line-height: var(--hds-lh-snug);  }
+h4 { font-size: var(--hds-text-lg);  line-height: var(--hds-lh-snug);  }
+h5 { font-size: var(--hds-text-md);  line-height: var(--hds-lh-snug);  }
+h6 {
+  font-size: var(--hds-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--hds-tracking-wide);
+  color: var(--hds-ink-3);
+}
+
+.hds-display {
+  font-family: var(--hds-font-display);
+  font-weight: 600;
+  font-size: var(--hds-text-4xl);
+  line-height: var(--hds-lh-tight);
+  letter-spacing: var(--hds-tracking-tight);
+  color: var(--hds-ink);
+}
+.hds-eyebrow {
+  font-family: var(--hds-font-display);
+  font-weight: 600;
+  font-size: var(--hds-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--hds-orange);
+}
+
+p {
+  margin: 0 0 var(--hds-space-4);
+  font-size: var(--hds-text-base);
+  line-height: var(--hds-lh-normal);
+  text-wrap: pretty;
+}
+.hds-lead { font-size: var(--hds-text-md); color: var(--hds-ink-2); }
+
+a {
+  color: var(--hds-orange-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--hds-orange-soft);
+  transition: color var(--hds-dur-quick) var(--hds-ease),
+              text-decoration-color var(--hds-dur-quick) var(--hds-ease);
+}
+a:hover { color: var(--hds-orange); text-decoration-color: currentColor; }
+a:focus-visible { outline: none; box-shadow: var(--hds-shadow-focus); border-radius: var(--hds-radius-xs); }
+
+blockquote {
+  margin: 0;
+  font-family: var(--hds-font-serif);
+  font-style: italic;
+  font-size: var(--hds-text-md);
+  line-height: var(--hds-lh-normal);
+  color: var(--hds-ink);
+  border-left: 3px solid var(--hds-green);
+  padding: var(--hds-space-2) 0 var(--hds-space-2) var(--hds-space-6);
+}
+blockquote cite {
+  display: block;
+  margin-top: var(--hds-space-3);
+  font-family: var(--hds-font-body);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--hds-text-sm);
+  color: var(--hds-ink-3);
+  letter-spacing: var(--hds-tracking-wide);
+  text-transform: uppercase;
+}
+
+code, kbd, samp, pre { font-family: var(--hds-font-mono); font-size: 0.9em; }
+hr { border: 0; border-top: 1px solid var(--hds-line); margin: var(--hds-space-8) 0; }
+::selection { background: var(--hds-orange-soft); color: var(--hds-ink); }
