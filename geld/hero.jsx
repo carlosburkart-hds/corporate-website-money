@@ -29,7 +29,7 @@ function HdSGeldHero() {
       <div className="hero__overlay" aria-hidden="true"></div>
 
       <div className="hero__content">
-        <h1>Ihr Unternehmens­engagement mit Geld</h1>
+        <h1>Ihr Unternehmensengagement mit Geld</h1>
         <p className="hero__lede">
           Gesellschaftliches Engagement ist eine Investition in eine nachhaltige Zukunft.
           Mit Haus des Stiftens übernehmen Unternehmen durch gezielte Spenden­aktivitäten
@@ -146,26 +146,19 @@ function HdSProcess() {
             Demo-Video ansehen
           </a>
         </div>
-        <div className="process">
-          <div className="process__copy">
-            <p>
-              „Haus des Stiftens eröffnet vielfältige Wege, Gutes zu tun. Ihr Engagement kann
-              als Unternehmens­spende erfolgen — oder gemeinsam mit Mitarbeitenden, Kundinnen
-              und Kunden verwirklicht werden."
-            </p>
-            <p style={{ fontStyle: 'normal', fontFamily: 'var(--hds-font-body)', fontSize: 15, color: 'var(--hds-ink-3)', marginTop: 24 }}>
-              <b style={{ color: 'var(--hds-ink-2)', fontWeight: 600 }}>Platzhalter:</b> An dieser Stelle ist
-              gemäß Vorschlag eine grafische Prozess­übersicht oder ein kurzes Demo-Video vorgesehen.
-            </p>
-          </div>
-          <div className="process__steps">
-            {steps.map((s, i) => (
-              <div key={i} className="process__step">
-                <div className="process__num">{i + 1}</div>
-                <h4>{s}</h4>
-              </div>
-            ))}
-          </div>
+        <blockquote className="process__lead">
+          „Haus des Stiftens eröffnet vielfältige Wege, Gutes zu tun. Ihr Engagement kann
+          als Unternehmens­spende erfolgen — oder gemeinsam mit Mitarbeitenden, Kundinnen
+          und Kunden verwirklicht werden."
+        </blockquote>
+
+        <div className="process-flow">
+          {steps.map((s, i) => (
+            <div key={i} className="process-step">
+              <div className="process-step__num">{i + 1}</div>
+              <p className="process-step__text">{s}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

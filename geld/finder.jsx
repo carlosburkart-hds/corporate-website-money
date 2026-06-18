@@ -167,7 +167,7 @@ function HdSLoesungsfinder() {
                   {product.link
                     ? <a href={product.link} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Zur Produktseite <span className="arrow">›</span></a>
                     : <a href="#beratung" className="btn btn--primary">Beratung buchen <span className="arrow">›</span></a>}
-                  <button className="btn btn--ghost-dark" onClick={reset}>Andere Auswahl</button>
+                  <button className="btn btn--ghost-dark" onClick={reset}>Fragen neu starten</button>
                 </div>
                 {product.pdfLink && (
                   <a href={product.pdfLink} target="_blank" rel="noopener noreferrer" className="btn btn--link" style={{ marginTop: 4 }}>
