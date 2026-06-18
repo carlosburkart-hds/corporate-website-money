@@ -18,15 +18,14 @@ function HdSLogoStrip() {
   );
 }
 
-/* 2) Wirkung & Reichweite — Impact-Zahlen + Weltkarte + Satzungszwecke */
+/* 2) Wirkung & Reichweite — Impact-Zahlen + Spendenvolumen-Diagramm + Satzungszwecke */
 function HdSWirkungReichweite() {
-  const regions = [
-    { id: 'NA', label: 'North America', amount: '1 Mio €',  size: 'sm', x: 22, y: 36 },
-    { id: 'SA', label: 'South America', amount: '1 Mio €',  size: 'sm', x: 32, y: 65 },
-    { id: 'EU', label: 'Europa',        amount: '10 Mio €', size: 'lg', x: 49, y: 30 },
-    { id: 'AF', label: 'Afrika',        amount: '2 Mio €',  size: 'sm', x: 52, y: 58 },
-    { id: 'AS', label: 'Asien',         amount: '1 Mio €',  size: 'sm', x: 72, y: 42 },
+  // Jährliches Spendenvolumen seit 2018 (Platzhalter)
+  const yearly = [
+    { y: 2018, v: 1.8 }, { y: 2019, v: 2.4 }, { y: 2020, v: 4.1 }, { y: 2021, v: 5.3 },
+    { y: 2022, v: 6.4 }, { y: 2023, v: 7.1 }, { y: 2024, v: 7.8 }, { y: 2025, v: 8.6 },
   ];
+  const maxV = 10;
   const purposes = [
     { label: 'Bildung & Erziehung',          pct: 82, count: '24.300 NPOs' },
     { label: 'Soziale Hilfen & Armut',        pct: 78, count: '21.900 NPOs' },
@@ -70,29 +69,31 @@ function HdSWirkungReichweite() {
           </div>
         </div>
 
-        {/* International (Karte) + National (Satzungszwecke) in einem Block */}
+        {/* Entwicklung (Diagramm) + Verteilung (Satzungszwecke) in einem Block */}
         <div className="numbers-grid" style={{ marginTop: 32 }}>
           <div className="numbers-card">
             <div className="numbers-flag">Vorschau · Daten folgen</div>
             <div className="numbers-card__head">
-              <h3>Ausschüttung weltweit seit 2018</h3>
+              <h3>Jährliches Spenden­volumen</h3>
+              <small>in Mio. €</small>
             </div>
-            <div className="worldmap">
-              <CompactWorldMapSVG />
-              {regions.map(r => (
-                <div key={r.id} className="worldmap__pin" style={{ left: r.x + '%', top: r.y + '%' }}>
-                  <div className="worldmap__pin-label">
-                    {r.amount}
-                    <small>{r.label}</small>
+            <div className="chart">
+              <div className="chart__bars">
+                {yearly.map(d => (
+                  <div key={d.y} className="chart__bar">
+                    <div className="chart__bar-value">{d.v.toFixed(1).replace('.', ',')}</div>
+                    <div className="chart__bar-fill" style={{ height: (d.v / maxV * 100) + '%' }}></div>
                   </div>
-                  <div className={`worldmap__pin-dot ${r.size === 'lg' ? 'is-lg' : ''}`}></div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="chart__labels">
+                {yearly.map(d => <span key={d.y}>{d.y}</span>)}
+              </div>
             </div>
-            <div className="worldmap__legend">
-              <span><i style={{ background: 'var(--hds-green)' }}></i> Schwerpunkt­regionen</span>
-              <span><i style={{ background: 'var(--hds-orange)' }}></i> Weitere Ziel­länder</span>
-            </div>
+            <p style={{ marginTop: 16, fontSize: 13, color: 'var(--hds-ink-3)' }}>
+              Wachstum von 1,8 Mio € (2018) auf 8,6 Mio € (2025) — kontinuierlich,
+              vor allem getragen von Mitarbeiter- und Kundenspenden.
+            </p>
           </div>
 
           <div className="numbers-card">
@@ -115,28 +116,6 @@ function HdSWirkungReichweite() {
         </div>
       </div>
     </section>
-  );
-}
-
-/* Schematische Weltkarte (Kopie aus numbers.jsx, für die kompakte Variante) */
-function CompactWorldMapSVG() {
-  return (
-    <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet" fill="none">
-      <defs>
-        <pattern id="dotsCompact" width="8" height="8" patternUnits="userSpaceOnUse">
-          <circle cx="2" cy="2" r="1" fill="#C8C4BA"/>
-        </pattern>
-      </defs>
-      <rect width="800" height="450" fill="#FAF7F1"/>
-      <g fill="url(#dotsCompact)">
-        <path d="M70,90 Q140,60 215,90 Q260,140 240,200 Q200,240 140,230 Q90,210 60,170 Q50,120 70,90Z"/>
-        <path d="M195,250 Q245,240 270,280 Q280,340 250,390 Q220,420 200,400 Q170,360 180,310 Q185,275 195,250Z"/>
-        <path d="M370,90 Q420,75 460,90 Q480,120 460,150 Q420,170 390,160 Q360,140 360,115 Q365,98 370,90Z"/>
-        <path d="M390,180 Q450,175 480,210 Q495,270 470,330 Q430,370 400,360 Q370,320 370,260 Q375,210 390,180Z"/>
-        <path d="M490,90 Q600,70 700,100 Q730,150 700,210 Q620,230 550,210 Q500,180 490,140 Q485,110 490,90Z"/>
-        <path d="M650,290 Q710,280 735,310 Q740,345 710,360 Q670,355 645,335 Q640,310 650,290Z"/>
-      </g>
-    </svg>
   );
 }
 

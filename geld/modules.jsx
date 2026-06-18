@@ -3,6 +3,8 @@
    und Variante B (Mini-Kacheln, Klick zum Aufklappen).
    Daten zentral, beide Layouts rendern dieselben Module. */
 
+const { useState: useModState } = React;
+
 /* --- inline icons (Lucide-style, 1.5px stroke) --- */
 const sw = { stroke: 'currentColor', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', fill: 'none' };
 function IconWallet()    { return (<svg width="32" height="32" viewBox="0 0 24 24" {...sw}><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 14h2"/></svg>); }
@@ -71,7 +73,7 @@ function HdSModules() {
           <a href="#beratung" className="btn btn--ghost-dark">Bausteine konfigurieren <span className="arrow">›</span></a>
         </div>
 
-        {MODULE_TIERS.map(t => <ModuleListTier key={t.num} tier={t} />)}
+        {MODULE_TIERS.map((t, i) => <ModuleListTier key={t.num} tier={t} defaultOpen={i === 0} />)}
 
         {/* Cost note */}
         <div className="cost-note">
@@ -87,24 +89,32 @@ function HdSModules() {
   );
 }
 
-/* Variante A — kompakte Liste, 2 Spalten */
-function ModuleListTier({ tier }) {
+/* Ebene als aufklappbares Akkordeon (kompakte 2-Spalten-Liste im Panel) */
+function ModuleListTier({ tier, defaultOpen }) {
+  const [open, setOpen] = useModState(!!defaultOpen);
   return (
-    <div className="module-tier">
-      <div className="module-tier__head">
+    <div className={`module-tier ${open ? 'is-open' : ''}`}>
+      <button type="button" className="module-tier__head" aria-expanded={open} onClick={() => setOpen(!open)}>
         <span className="module-tier__num">{tier.num}</span>
         <h3 className="module-tier__title">{tier.title}</h3>
-      </div>
-      <div className="mod-list">
-        {tier.modules.map(m => (
-          <div className="mod-list__item" key={m.title}>
-            <div className="mod-list__icon"><m.Icon /></div>
-            <div>
-              <div className="mod-list__title">{m.title}</div>
-              <p className="mod-list__body">{m.body}</p>
+        <span className="module-tier__chevron" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+      </button>
+      <div className="module-tier__panel">
+        <div className="mod-list">
+          {tier.modules.map(m => (
+            <div className="mod-list__item" key={m.title}>
+              <div className="mod-list__icon"><m.Icon /></div>
+              <div>
+                <div className="mod-list__title">{m.title}</div>
+                <p className="mod-list__body">{m.body}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -470,12 +470,13 @@ button { font-family: inherit; }
 }
 .chart__bars {
   display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px;
-  align-items: end;
+  align-items: stretch;
   border-bottom: 1px solid var(--hds-line);
   padding-bottom: 1px;
 }
 .chart__bar {
-  display: flex; flex-direction: column; align-items: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  height: 100%;
   position: relative;
 }
 .chart__bar-fill {
@@ -533,16 +534,17 @@ button { font-family: inherit; }
 /* -----------------------------------------------------------------------
    Modules
    ----------------------------------------------------------------------- */
-.module-tier {
-  margin-bottom: 56px;
-}
+.module-tier { margin-bottom: 12px; }
 .module-tier:last-child { margin-bottom: 0; }
+/* Ebenen-Kopf = Akkordeon-Schalter */
 .module-tier__head {
+  width: 100%;
   display: flex; align-items: center; gap: 16px;
-  margin-bottom: 28px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--hds-line);
+  padding: 22px 0; margin: 0;
+  background: none; border: none; border-bottom: 1px solid var(--hds-line);
+  cursor: pointer; text-align: left; font: inherit;
 }
+.module-tier__head:hover .module-tier__title { color: var(--hds-orange-deep); }
 .module-tier__num {
   font-family: var(--hds-font-display); font-weight: 600;
   font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -552,7 +554,20 @@ button { font-family: inherit; }
   font-family: var(--hds-font-display); font-weight: 600;
   font-size: 22px; line-height: 1.2;
   color: var(--hds-ink); margin: 0;
+  transition: color var(--hds-dur-quick) var(--hds-ease);
 }
+.module-tier__chevron {
+  margin-left: auto; display: grid; place-items: center;
+  color: var(--hds-ink-3);
+  transition: transform var(--hds-dur-base) var(--hds-ease);
+}
+.module-tier.is-open .module-tier__chevron { transform: rotate(180deg); }
+.module-tier__panel {
+  overflow: hidden; max-height: 0;
+  transition: max-height var(--hds-dur-slow) var(--hds-ease);
+}
+.module-tier.is-open .module-tier__panel { max-height: 1600px; }
+.module-tier.is-open .mod-list { padding-top: 8px; }
 /* Cost note */
 .cost-note {
   margin-top: 64px;

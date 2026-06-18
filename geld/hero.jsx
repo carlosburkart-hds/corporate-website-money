@@ -29,7 +29,7 @@ function HdSGeldHero() {
       <div className="hero__overlay" aria-hidden="true"></div>
 
       <div className="hero__content">
-        <h1>Ihr Engagement mit Geld</h1>
+        <h1>Ihr Unternehmens­engagement mit Geld</h1>
         <p className="hero__lede">
           Gesellschaftliches Engagement ist eine Investition in eine nachhaltige Zukunft.
           Mit Haus des Stiftens übernehmen Unternehmen durch gezielte Spenden­aktivitäten
@@ -39,6 +39,9 @@ function HdSGeldHero() {
           <a href="#beratung" className="btn btn--primary">
             Beratungstermin buchen
             <span className="arrow">›</span>
+          </a>
+          <a href="#loesungsfinder" className="btn btn--ghost-dark">
+            Produktfinder starten
           </a>
           <a href="#demo" className="btn btn--ghost-dark">
             Demo anschauen

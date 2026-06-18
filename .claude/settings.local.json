@@ -19,7 +19,13 @@
       "PowerShell($chrome = \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\"; $dir=\"C:\\\\hds_shots\"; New-Item -ItemType Directory -Force $dir | Out-Null; $out=\"$dir\\\\live_top.png\"; Remove-Item $out -ErrorAction SilentlyContinue; Start-Process -FilePath $chrome -ArgumentList '--headless=new','--disable-gpu','--no-first-run','--user-data-dir=C:\\\\hds_shots\\\\profile2','--hide-scrollbars','--window-size=1440,1100','--virtual-time-budget=12000',\"--screenshot=$out\",'https://www.hausdesstiftens.org/unternehmen/engagement-mit-geld/' -NoNewWindow -Wait 2>$null; if\\(Test-Path $out\\){ \"OK \" + [math]::Round\\(\\(Get-Item $out\\).Length/1kb\\) + \" KB\" } else { \"NO FILE\" })",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img=[System.Drawing.Image]::FromFile\\(\"C:\\\\hds_shots\\\\live_top.png\"\\); $h=110; $bmp=New-Object System.Drawing.Bitmap\\($img.Width,$h\\); $g=[System.Drawing.Graphics]::FromImage\\($bmp\\); $g.DrawImage\\($img,\\(New-Object System.Drawing.Rectangle\\(0,0,$img.Width,$h\\)\\),\\(New-Object System.Drawing.Rectangle\\(0,0,$img.Width,$h\\)\\),[System.Drawing.GraphicsUnit]::Pixel\\); $bmp.Save\\(\"C:\\\\hds_shots\\\\live_header.png\"\\); $g.Dispose\\(\\);$bmp.Dispose\\(\\);$img.Dispose\\(\\); \"done\")",
       "Bash(:)",
-      "Bash(printf 'User-agent: *\\\\nDisallow: /\\\\n')"
+      "Bash(printf 'User-agent: *\\\\nDisallow: /\\\\n')",
+      "WebFetch(domain:carlosburkart-hds.github.io)",
+      "Bash(curl -s \"http://localhost:4599/\")",
+      "Bash(curl -s \"http://localhost:4599/geld/hero.jsx\")",
+      "Bash(curl -s \"http://localhost:4599/geld/modules.jsx\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:4599/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:4599/geld/hero.jsx\")"
     ]
   }
 }

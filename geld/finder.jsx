@@ -88,7 +88,7 @@ function HdSLoesungsfinder() {
   const product = finished ? products.find(p => p.id === resultId) : null;
 
   return (
-    <section className="section section--paper-2">
+    <section className="section section--paper-2" id="loesungsfinder">
       <div className="container">
         <div className="finder">
           <div className="finder__intro">
